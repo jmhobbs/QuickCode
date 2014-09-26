@@ -20,6 +20,9 @@
 		059CE3A519D4A1E800D9C518 /* QuickCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CE3A419D4A1E800D9C518 /* QuickCodeTests.m */; };
 		059CE3B019D4CD1E00D9C518 /* Objective-C.src in Sources */ = {isa = PBXBuildFile; fileRef = 059CE3AF19D4CD1E00D9C518 /* Objective-C.src */; };
 		059CE3B219D4D04600D9C518 /* Objective-C.src in Resources */ = {isa = PBXBuildFile; fileRef = 059CE3AF19D4CD1E00D9C518 /* Objective-C.src */; };
+		059CE3B519D527DA00D9C518 /* QCProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CE3B419D527DA00D9C518 /* QCProgram.m */; };
+		059CE3B819D528B100D9C518 /* QCObjectiveCProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CE3B719D528B100D9C518 /* QCObjectiveCProgram.m */; };
+		059CE3BB19D5B61800D9C518 /* QCLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CE3BA19D5B61800D9C518 /* QCLogView.m */; };
 		E5FF7AB4C0414EF88DA30CCF /* libPods-QuickCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E19956878AA346169E01B695 /* libPods-QuickCode.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,12 @@
 		059CE3A219D4A1E800D9C518 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		059CE3A419D4A1E800D9C518 /* QuickCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickCodeTests.m; sourceTree = "<group>"; };
 		059CE3AF19D4CD1E00D9C518 /* Objective-C.src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Objective-C.src"; sourceTree = "<group>"; };
+		059CE3B319D527DA00D9C518 /* QCProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCProgram.h; sourceTree = "<group>"; };
+		059CE3B419D527DA00D9C518 /* QCProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCProgram.m; sourceTree = "<group>"; };
+		059CE3B619D528B100D9C518 /* QCObjectiveCProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCObjectiveCProgram.h; sourceTree = "<group>"; };
+		059CE3B719D528B100D9C518 /* QCObjectiveCProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCObjectiveCProgram.m; sourceTree = "<group>"; };
+		059CE3B919D5B61800D9C518 /* QCLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCLogView.h; sourceTree = "<group>"; };
+		059CE3BA19D5B61800D9C518 /* QCLogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCLogView.m; sourceTree = "<group>"; };
 		E19956878AA346169E01B695 /* libPods-QuickCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB5445A895B4EB996D9AF33 /* Pods-QuickCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCode.xcconfig"; path = "Pods/Pods-QuickCode.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +136,8 @@
 				059CE3AE19D4CCE200D9C518 /* Languages */,
 				059CE38C19D4A1E800D9C518 /* QCAppDelegate.h */,
 				059CE38D19D4A1E800D9C518 /* QCAppDelegate.m */,
+				059CE3B919D5B61800D9C518 /* QCLogView.h */,
+				059CE3BA19D5B61800D9C518 /* QCLogView.m */,
 				059CE38F19D4A1E800D9C518 /* MainMenu.xib */,
 				059CE39219D4A1E800D9C518 /* Images.xcassets */,
 				059CE38119D4A1E800D9C518 /* Supporting Files */,
@@ -168,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				059CE3AF19D4CD1E00D9C518 /* Objective-C.src */,
+				059CE3B319D527DA00D9C518 /* QCProgram.h */,
+				059CE3B419D527DA00D9C518 /* QCProgram.m */,
+				059CE3B619D528B100D9C518 /* QCObjectiveCProgram.h */,
+				059CE3B719D528B100D9C518 /* QCObjectiveCProgram.m */,
 			);
 			name = Languages;
 			sourceTree = "<group>";
@@ -308,8 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				059CE38E19D4A1E800D9C518 /* QCAppDelegate.m in Sources */,
+				059CE3BB19D5B61800D9C518 /* QCLogView.m in Sources */,
 				059CE3B019D4CD1E00D9C518 /* Objective-C.src in Sources */,
 				059CE38719D4A1E800D9C518 /* main.m in Sources */,
+				059CE3B819D528B100D9C518 /* QCObjectiveCProgram.m in Sources */,
+				059CE3B519D527DA00D9C518 /* QCProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
