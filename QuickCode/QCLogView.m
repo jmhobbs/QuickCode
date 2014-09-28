@@ -15,12 +15,14 @@
 }
 
 - (void)writeAttributedLine:(NSString *)string foreground:(NSColor *)foreground background:(NSColor *)background {
+    NSLog(@"%@", string);
     NSMutableDictionary *attrs = [[NSMutableDictionary alloc] initWithCapacity:3];
     attrs[NSFontAttributeName] = [NSFont fontWithName:@"Menlo" size:14];
     if(foreground) { attrs[NSForegroundColorAttributeName] = foreground; }
     if(background) { attrs[NSBackgroundColorAttributeName] = background; }
     NSAttributedString *attr = [[NSAttributedString alloc] initWithString:[string stringByAppendingString:@"\n"] attributes:attrs];
     [self.textStorage insertAttributedString:attr atIndex:0];
+    [self setNeedsDisplay:YES];
 }
 
 - (void)debug:(NSString *)string {
