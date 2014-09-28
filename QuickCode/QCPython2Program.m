@@ -16,7 +16,7 @@
 }
 
 - (bool)compile:(NSString *)code {
-    NSString *sourceFileTemplate = [NSTemporaryDirectory() stringByAppendingPathComponent:@"quickcode.XXXXXX.m"];
+    NSString *sourceFileTemplate = [NSTemporaryDirectory() stringByAppendingPathComponent:@"quickcode.XXXXXX.py"];
     const char *sourceFileTemplateCString = [sourceFileTemplate fileSystemRepresentation];
     char *sourceFileNameCString = (char *)malloc(strlen(sourceFileTemplateCString) + 1);
     strcpy(sourceFileNameCString, sourceFileTemplateCString);
@@ -56,4 +56,5 @@
     NSString *lines = [[NSString alloc] initWithData:[[notification userInfo] objectForKey:NSFileHandleNotificationDataItem] encoding:NSUTF8StringEncoding];
     [self.log info:lines];
 }
+
 @end
