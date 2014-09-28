@@ -18,13 +18,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *source = [mainBundle pathForResource:@"Objective-C" ofType:@"src"];
-    
-    NSError *error;
-    NSString *src = [NSString stringWithContentsOfFile:source encoding:NSUTF8StringEncoding error:&error];
-    
-    [self.input setString:src];
     [self.input setDelegate:self];
     [self.input setMode:ACEModeCPP];
     [self.input setTheme:ACEThemeMonokai];
@@ -33,17 +26,38 @@
     [[self.output textStorage] setFont:[NSFont fontWithName:@"Menlo" size:14]];
     
     [self.languageSelect addItemWithTitle:@"Objective-C"];
+    [self.languageSelect addItemWithTitle:@"Python 2"];
+    [self.languageSelect setAction:@selector(languageChanged:)];
+    [self.languageSelect setTarget:self];
     [self.languageSelect selectItemAtIndex:0];
+    [self languageChanged:self.languageSelect];
 }
 
-- (IBAction)runProgram:(id)sender {
+- (IBAction)languageChanged:(id)sender
+{
+    NSString *language = [self.languageSelect titleOfSelectedItem];
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *source = [mainBundle pathForResource:[language stringByReplacingOccurrencesOfString:@" " withString:@""] ofType:@"src"];
+    NSError *error;
+    NSString *src = [NSString stringWithContentsOfFile:source encoding:NSUTF8StringEncoding error:&error];
+    
+    [self.input setString:src];
+}
+
+- (IBAction)runProgram:(id)sender
+{
+    NSString *language = [self.languageSelect titleOfSelectedItem];
     [self.output.textStorage setAttributedString:[[NSAttributedString alloc] initWithString:@"" ]];
     
     [self.runButton setHidden:YES];
     [self.workingSpinner setHidden:NO];
     [self.workingSpinner startAnimation:nil];
 
-    QCObjectiveCProgram *program = [[QCObjectiveCProgram alloc] initWithLog:self.output];
+    NSString *className = [language stringByReplacingOccurrencesOfString:@" " withString:@""];
+    className = [className stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    className = [NSString stringWithFormat:@"QC%@Program", className];
+
+    id program = [[NSClassFromString(className) alloc] initWithLog:self.output];
     if([program compile:[self.input string]]) {
         [program execute];
     }

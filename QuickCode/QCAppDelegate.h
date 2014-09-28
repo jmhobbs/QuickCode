@@ -21,7 +21,6 @@
 @property (weak) IBOutlet NSProgressIndicator *workingSpinner;
 @property (weak) IBOutlet NSPopUpButton *languageSelect;
 
-
 - (IBAction)runProgram:(id)sender;
 
 @end

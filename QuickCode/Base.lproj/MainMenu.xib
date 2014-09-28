@@ -675,7 +675,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="872" height="445"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="872" height="445"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -707,17 +707,17 @@
                                 <rect key="frame" x="0.0" y="248" width="872" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" id="HA0-5G-wKs">
-                                    <rect key="frame" x="1" y="1" width="855" height="154"/>
+                                    <rect key="frame" x="1" y="1" width="870" height="154"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="3nc-WS-HfO" customClass="QCLogView">
-                                            <rect key="frame" x="0.0" y="0.0" width="855" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="870" height="154"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="855" height="154"/>
+                                            <size key="minSize" width="870" height="154"/>
                                             <size key="maxSize" width="872" height="10000000"/>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="855" height="154"/>
+                                            <size key="minSize" width="870" height="154"/>
                                             <size key="maxSize" width="872" height="10000000"/>
                                         </textView>
                                     </subviews>
@@ -728,7 +728,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="5qe-eW-iJt">
-                                    <rect key="frame" x="856" y="1" width="15" height="154"/>
+                                    <rect key="frame" x="855" y="1" width="16" height="154"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -743,7 +743,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="4kR-HC-3Fm">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="IYk-Ry-ZQa"/>
                         </popUpButtonCell>
                     </popUpButton>
