@@ -27,6 +27,7 @@
     
     [self.languageSelect addItemWithTitle:@"Objective-C"];
     [self.languageSelect addItemWithTitle:@"Python 2"];
+    [self.languageSelect addItemWithTitle:@"Ruby"];
     [self.languageSelect setAction:@selector(languageChanged:)];
     [self.languageSelect setTarget:self];
     [self.languageSelect selectItemAtIndex:0];
