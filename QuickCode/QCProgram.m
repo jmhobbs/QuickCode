@@ -10,6 +10,21 @@
 
 @implementation QCProgram
 
++ (NSString *)pathToBinary:(NSString *)binaryName {
+    NSDictionary *environmentDict = [[NSProcessInfo processInfo] environment];
+    NSString *shellString = [environmentDict objectForKey:@"SHELL"];
+    
+    NSPipe *pipe = [[NSPipe alloc] init];
+    NSTask *task = [[NSTask alloc] init];
+    [task setStandardOutput:pipe];
+    [task setLaunchPath:shellString];
+    [task setArguments:[NSArray arrayWithObjects:@"-l", @"-c", [NSString stringWithFormat:@"which %@", binaryName], nil]];
+    [task launch];
+    [task waitUntilExit];
+    
+    return [[[NSString alloc] initWithData:[[pipe fileHandleForReading] readDataToEndOfFile] encoding:NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+}
+
 - (id)initWithLog:(QCLogView *)log {
     self = [self init];
     if(self) {

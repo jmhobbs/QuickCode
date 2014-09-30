@@ -14,6 +14,8 @@
 
 @interface QCProgram : NSObject
 
++ (NSString *)pathToBinary:(NSString *)binaryName;
+
 - (id)initWithLog:(QCLogView *)log;
 
 @property (strong, nonatomic) QCLogView *log;

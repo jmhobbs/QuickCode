@@ -53,12 +53,10 @@
                                              selector:@selector(readCompleted:)
                                                  name:NSFileHandleReadToEndOfFileCompletionNotification
                                                object:[outputPipe fileHandleForReading]];
-    
 
-    
     [self.log debug:@"[QuickCode] Building..."];
     NSTask *task = [[NSTask alloc] init];
-    [task setLaunchPath:@"/usr/bin/clang"];
+    [task setLaunchPath:[QCProgram pathToBinary:@"clang"]];
     [task setArguments:arguments];
     [task setStandardOutput:outputPipe];
     [task setStandardError:outputPipe];
