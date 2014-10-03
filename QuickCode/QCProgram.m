@@ -37,6 +37,10 @@
     return NO;
 }
 
++ (ACEMode)highlightMode {
+    return ACEModeText;
+}
+
 - (bool)compile:(NSString *)code {
     [[NSException exceptionWithName:@"NotImplementedError" reason:@"Method not implemented." userInfo:nil] raise];
     return NO;

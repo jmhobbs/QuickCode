@@ -10,6 +10,7 @@
 // imported/exported and enumerated on the fly.
 
 #import <Foundation/Foundation.h>
+#import <ACEView/ACEModes.h>
 #import "QCLogView.h"
 
 @interface QCProgram : NSObject
@@ -21,6 +22,7 @@
 @property (strong, nonatomic) QCLogView *log;
 
 + (bool)isAvailable;
++ (ACEMode)highlightMode;
 
 - (bool)compile:(NSString *)code;
 - (bool)execute;

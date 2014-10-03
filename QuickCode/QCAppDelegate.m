@@ -21,7 +21,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
     [self.input setDelegate:self];
-    [self.input setMode:ACEModeCPP];
+    [self.input setMode:ACEModeText];
     [self.input setTheme:ACEThemeMonokai];
     
     [self.output setEditable:NO];
@@ -51,6 +51,12 @@
     NSString *src = [NSString stringWithContentsOfFile:source encoding:NSUTF8StringEncoding error:&error];
     
     [self.input setString:src];
+    
+    NSString *className = [language stringByReplacingOccurrencesOfString:@" " withString:@""];
+    className = [className stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    className = [NSString stringWithFormat:@"QC%@Program", className];
+
+    [self.input setMode:[NSClassFromString(className) highlightMode]];
 }
 
 - (IBAction)runProgram:(id)sender

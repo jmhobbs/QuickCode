@@ -14,6 +14,11 @@
     return nil != [QCProgram pathToBinary:@"clang"];
 }
 
+
++ (ACEMode)highlightMode {
+    return ACEModeCPP;
+}
+
 - (bool)compile:(NSString *)code {
     NSString *sourceFileTemplate = [NSTemporaryDirectory() stringByAppendingPathComponent:@"quickcode.XXXXXX.m"];
     const char *sourceFileTemplateCString = [sourceFileTemplate fileSystemRepresentation];

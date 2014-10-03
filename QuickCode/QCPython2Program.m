@@ -14,6 +14,10 @@
     return nil != [QCProgram pathToBinary:@"python"];
 }
 
++ (ACEMode)highlightMode {
+    return ACEModePython;
+}
+
 - (bool)compile:(NSString *)code {
     NSString *sourceFileTemplate = [NSTemporaryDirectory() stringByAppendingPathComponent:@"quickcode.XXXXXX.py"];
     const char *sourceFileTemplateCString = [sourceFileTemplate fileSystemRepresentation];

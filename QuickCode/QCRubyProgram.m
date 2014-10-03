@@ -14,6 +14,10 @@
     return nil != [QCProgram pathToBinary:@"ruby"];
 }
 
++ (ACEMode)highlightMode {
+    return ACEModeRuby;
+}
+
 - (bool)compile:(NSString *)code {
     NSString *sourceFileTemplate = [NSTemporaryDirectory() stringByAppendingPathComponent:@"quickcode.XXXXXX.rb"];
     const char *sourceFileTemplateCString = [sourceFileTemplate fileSystemRepresentation];
