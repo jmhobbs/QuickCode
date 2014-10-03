@@ -20,7 +20,8 @@
 
 @property (strong, nonatomic) QCLogView *log;
 
-- (bool)isAvailable;
++ (bool)isAvailable;
+
 - (bool)compile:(NSString *)code;
 - (bool)execute;
 

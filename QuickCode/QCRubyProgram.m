@@ -10,9 +10,8 @@
 
 @implementation QCRubyProgram
 
-- (bool)isAvailable {
-#warning Incomplete Implementation
-    return YES;
++ (bool)isAvailable {
+    return nil != [QCProgram pathToBinary:@"ruby"];
 }
 
 - (bool)compile:(NSString *)code {

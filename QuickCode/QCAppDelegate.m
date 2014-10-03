@@ -12,6 +12,8 @@
 
 //-----
 #import "QCObjectiveCProgram.h"
+#import "QCPython2Program.h"
+#import "QCRubyProgram.h"
 //-----
 
 @implementation QCAppDelegate
@@ -25,9 +27,15 @@
     [self.output setEditable:NO];
     [[self.output textStorage] setFont:[NSFont fontWithName:@"Menlo" size:14]];
     
-    [self.languageSelect addItemWithTitle:@"Objective-C"];
-    [self.languageSelect addItemWithTitle:@"Python 2"];
-    [self.languageSelect addItemWithTitle:@"Ruby"];
+    if([QCObjectiveCProgram isAvailable]) {
+        [self.languageSelect addItemWithTitle:@"Objective-C"];
+    }
+    if([QCPython2Program isAvailable]) {
+        [self.languageSelect addItemWithTitle:@"Python 2"];
+    }
+    if([QCRubyProgram isAvailable]) {
+        [self.languageSelect addItemWithTitle:@"Ruby"];
+    }
     [self.languageSelect setAction:@selector(languageChanged:)];
     [self.languageSelect setTarget:self];
     [self.languageSelect selectItemAtIndex:0];

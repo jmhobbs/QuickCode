@@ -33,7 +33,7 @@
     return self;
 }
 
-- (bool)isAvailable {
++ (bool)isAvailable {
     return NO;
 }
 

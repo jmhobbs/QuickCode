@@ -10,9 +10,8 @@
 
 @implementation QCObjectiveCProgram
 
-- (bool)isAvailable {
-#warning Incomplete Implementation
-    return YES;
++ (bool)isAvailable {
+    return nil != [QCProgram pathToBinary:@"clang"];
 }
 
 - (bool)compile:(NSString *)code {

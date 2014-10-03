@@ -10,9 +10,8 @@
 
 @implementation QCPython2Program
 
-- (bool)isAvailable {
-#warning Incomplete Implementation
-    return YES;
++ (bool)isAvailable {
+    return nil != [QCProgram pathToBinary:@"python"];
 }
 
 - (bool)compile:(NSString *)code {
