@@ -23,7 +23,7 @@
     const char *sourceFileTemplateCString = [sourceFileTemplate fileSystemRepresentation];
     char *sourceFileNameCString = (char *)malloc(strlen(sourceFileTemplateCString) + 1);
     strcpy(sourceFileNameCString, sourceFileTemplateCString);
-    int sourceFileDescriptor = mkstemps(sourceFileNameCString, 2);
+    int sourceFileDescriptor = mkstemps(sourceFileNameCString, 3);
     
     if (sourceFileDescriptor == -1) {
         [self.log error:@"Error creating temporary file."];
