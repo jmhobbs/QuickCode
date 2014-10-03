@@ -14,6 +14,7 @@
 #import "QCObjectiveCProgram.h"
 #import "QCPython2Program.h"
 #import "QCRubyProgram.h"
+#import "QCPHPProgram.h"
 //-----
 
 @implementation QCAppDelegate
@@ -36,6 +37,10 @@
     if([QCRubyProgram isAvailable]) {
         [self.languageSelect addItemWithTitle:@"Ruby"];
     }
+    if([QCPHPProgram isAvailable]) {
+        [self.languageSelect addItemWithTitle:@"PHP"];
+    }
+    
     [self.languageSelect setAction:@selector(languageChanged:)];
     [self.languageSelect setTarget:self];
     [self.languageSelect selectItemAtIndex:0];

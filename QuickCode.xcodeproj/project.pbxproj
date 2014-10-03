@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0519B33D19DDE803009A7773 /* QCPHPProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 0519B33C19DDE803009A7773 /* QCPHPProgram.m */; };
+		0519B34019DDE817009A7773 /* PHP.src in Resources */ = {isa = PBXBuildFile; fileRef = 0519B33E19DDE817009A7773 /* PHP.src */; };
 		059CE37B19D4A1E800D9C518 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059CE37A19D4A1E800D9C518 /* Cocoa.framework */; };
 		059CE38519D4A1E800D9C518 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 059CE38319D4A1E800D9C518 /* InfoPlist.strings */; };
 		059CE38719D4A1E800D9C518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 059CE38619D4A1E800D9C518 /* main.m */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0519B33B19DDE803009A7773 /* QCPHPProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPHPProgram.h; sourceTree = "<group>"; };
+		0519B33C19DDE803009A7773 /* QCPHPProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPHPProgram.m; sourceTree = "<group>"; };
+		0519B33E19DDE817009A7773 /* PHP.src */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PHP.src; sourceTree = "<group>"; };
 		059CE37719D4A1E800D9C518 /* QuickCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059CE37A19D4A1E800D9C518 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		059CE37D19D4A1E800D9C518 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -197,6 +202,8 @@
 				059CE3C719D79A6C00D9C518 /* QCPython2Program.m */,
 				059CE3CC19D7A1C400D9C518 /* QCRubyProgram.h */,
 				059CE3CD19D7A1C400D9C518 /* QCRubyProgram.m */,
+				0519B33B19DDE803009A7773 /* QCPHPProgram.h */,
+				0519B33C19DDE803009A7773 /* QCPHPProgram.m */,
 			);
 			name = Languages;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				059CE3AF19D4CD1E00D9C518 /* Objective-C.src */,
 				059CE3C419D7999100D9C518 /* Python2.src */,
 				059CE3CA19D7A16400D9C518 /* Ruby.src */,
+				0519B33E19DDE817009A7773 /* PHP.src */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 				059CE39319D4A1E800D9C518 /* Images.xcassets in Resources */,
 				059CE38B19D4A1E800D9C518 /* Credits.rtf in Resources */,
 				059CE39119D4A1E800D9C518 /* MainMenu.xib in Resources */,
+				0519B34019DDE817009A7773 /* PHP.src in Resources */,
 				059CE3C519D7999100D9C518 /* Python2.src in Resources */,
 				059CE3CB19D7A16400D9C518 /* Ruby.src in Resources */,
 			);
@@ -350,6 +359,7 @@
 			files = (
 				059CE3CE19D7A1C400D9C518 /* QCRubyProgram.m in Sources */,
 				059CE38E19D4A1E800D9C518 /* QCAppDelegate.m in Sources */,
+				0519B33D19DDE803009A7773 /* QCPHPProgram.m in Sources */,
 				059CE3C819D79A6C00D9C518 /* QCPython2Program.m in Sources */,
 				059CE3BB19D5B61800D9C518 /* QCLogView.m in Sources */,
 				059CE3B019D4CD1E00D9C518 /* Objective-C.src in Sources */,
